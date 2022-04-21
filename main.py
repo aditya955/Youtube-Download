@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
 import os
 import pytube
+import interface
 # from sys import platform
 # PLATFORM:str = platform.lower()
 
@@ -8,6 +8,7 @@ class YouTube:
     def __init__(self, defaultSavePath:str = "Downloads", fileExtension:str = "mp4") -> None:
         self.defaultSavePath:str = defaultSavePath
         self.fileExtension:str = fileExtension
+
 
         if(os.path.isdir(self.defaultSavePath) == False):
             os.mkdir(self.defaultSavePath)
@@ -51,8 +52,12 @@ class YouTube:
                 print(f"Url: {url} \t FileName: {fileName} \t savePath: {savePath}")
                 self.download(url, fileName, savePath)
 
+#class Front
+
 if __name__ == '__main__':
     y = YouTube()
+    limk = str(input('Enter Youtube Video Link: '))
     print("Downloading...")
-    y.download("https://youtu.be/dQw4w9WgXcQ")
+    y.download(limk)
+    print("Download Successful !")
     # y.downloadMultiple("/tmp/test.txt")
