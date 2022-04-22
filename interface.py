@@ -16,7 +16,7 @@ class Front():
         self.geometry('512x480')
         self.configure(background = "light green")
 
-    def
+    def LabelE(self):
         self.label1 = Label(root, text='Link'.grid(row = 0))
         self.e1 = Entry(tk)
         self.e1.grid(row=0, column=1)
