@@ -86,7 +86,9 @@ class YouTube:
                 fileName = None if fileName == "" else fileName
                 savePath = input("Enter Save Path for the video(Default=None): ")
                 savePath = None if savePath == "" else savePath
+                print("Downloading...")
                 self.download(url, fileName, savePath)
+                print("Downloaded Successfully...")
             elif(user_input == 3):
                 filePath = input("Enter File path for the list: ")
                 if(filePath == ""):
